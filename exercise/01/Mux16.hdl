@@ -14,5 +14,20 @@ CHIP Mux16 {
     OUT out[16];
 
     PARTS:
-    // Put your code here:
+    Mux(in1 = a[0] , in2 = b[0] , in3 = sel , out = out[0] );
+    Mux(in1 = a[1] , in2 = b[1] , in3 = sel , out = out[1] );
+    Mux(in1 = a[2] , in2 = b[2] , in3 = sel , out = out[2] );
+    Mux(in1 = a[3] , in2 = b[3] , in3 = sel , out = out[3]);
+    Mux(in1 = a[4] , in2 = b[4] , in3 = sel , out = out[4]);
+    Mux(in1 = a[5] , in2 = b[5] , in3 = sel , out = out[5]);
+    Mux(in1 = a[6] , in2 = b[6] , in3 = sel , out = out[6]);
+    Mux(in1 = a[7] , in2 = b[7] , in3 = sel , out = out[7]);
+    Mux(in1 = a[8] , in2 = b[8] , in3 = sel , out = out[8]);
+    Mux(in1 = a[9] , in2 = b[9] , in3 = sel , out = out[9]);
+    Mux(in1 = a[10] , in2 = b[10] , in3 = sel , out = out[10] );
+    Mux(in1 = a[11] , in2 = b[11] , in3 = sel , out = out[11] );
+    Mux(in1 = a[12] , in2 = b[12] , in3 = sel , out = out[12] );
+    Mux(in1 = a[13] , in2 = b[13] , in3 = sel , out = out[13] );
+    Mux(in1 = a[14] , in2 = b[14] , in3 = sel , out = out[14] );
+    Mux(in1 = a[15] , in2 = b[15] , in3 = sel , out = out[15] );
 }
