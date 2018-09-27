@@ -13,5 +13,20 @@ CHIP And16 {
     OUT out[16];
 
     PARTS:
-    // Put your code here:
+    And(in = in[0] , out = Notout[0]) ; 
+    And(in = in[1] , out = Notout[1]) ;
+    And(in = in[2] , out = Notout[2]) ; 
+    And(in = in[3] , out = Notout[3]) ; 
+    And(in = in[4] , out = Notout[4]) ; 
+    And(in = in[5] , out = Notout[5]) ; 
+    And(in = in[6] , out = Notout[6]) ; 
+    And(in = in[7] , out = Notout[7]) ; 
+    And(in = in[8] , out = Notout[8]) ; 
+    And(in = in[9] , out = Notout[9]) ; 
+    And(in = in[10] , out = Notout[10]) ; 
+    And(in = in[11] , out = Notout[11]) ; 
+    And(in = in[12], out = Notout[12]) ; 
+    And(in = in[13] , out = Notout[13]) ; 
+    And(in = in[14] , out = Notout[14]) ; 
+    And(in = in[15] , out = Notout[15]) ;
 }
