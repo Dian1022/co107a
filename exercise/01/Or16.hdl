@@ -13,21 +13,21 @@ CHIP Or16 {
     OUT out[16];
 
     PARTS:
-    Or(in1 = a[0] , in2 = b[0] , out = Orout[0]) ; 
-    Or(in1 = a[1] , in2 = b[1] , out = Orout[1]) ; 
-    Or(in1 = a[2] , in2 = b[2] , out = Orout[2]) ; 
-    Or(in1 = a[3] , in2 = b[3] , out = Orout[3]) ; 
-    Or(in1 = a[4] , in2 = b[4] , out = Orout[4]) ; 
-    Or(in1 = a[5] , in2 = b[5] , out = Orout[5]) ; 
-    Or(in1 = a[6] , in2 = b[6] , out = Orout[6]) ; 
-    Or(in1 = a[7] , in2 = b[7] , out = Orout[7]) ; 
-    Or(in1 = a[8] , in2 = b[8] , out = Orout[8]) ; 
-    Or(in1 = a[9] , in2 = b[9] , out = Orout[9]) ; 
-    Or(in1 = a[10] , in2 = b[10] , out = Orout[10]) ; 
-    Or(in1 = a[11] , in2 = b[11] , out = Orout[11]) ; 
-    Or(in1 = a[12] , in2 = b[12] , out = Orout[12]) ; 
-    Or(in1 = a[13] , in2 = b[13] , out = Orout[13]) ; 
-    Or(in1 = a[14] , in2 = b[14] , out = Orout[14]) ; 
-    Or(in1 = a[15] , in2 = b[15] , out = Orout[15]) ; 
+    Or(in1 = a[0] , in2 = b[0] , out = out[0]) ; 
+    Or(in1 = a[1] , in2 = b[1] , out = out[1]) ; 
+    Or(in1 = a[2] , in2 = b[2] , out = out[2]) ; 
+    Or(in1 = a[3] , in2 = b[3] , out = out[3]) ; 
+    Or(in1 = a[4] , in2 = b[4] , out = out[4]) ; 
+    Or(in1 = a[5] , in2 = b[5] , out = out[5]) ; 
+    Or(in1 = a[6] , in2 = b[6] , out = out[6]) ; 
+    Or(in1 = a[7] , in2 = b[7] , out = out[7]) ; 
+    Or(in1 = a[8] , in2 = b[8] , out = out[8]) ; 
+    Or(in1 = a[9] , in2 = b[9] , out = out[9]) ; 
+    Or(in1 = a[10] , in2 = b[10] , out = out[10]) ; 
+    Or(in1 = a[11] , in2 = b[11] , out = out[11]) ; 
+    Or(in1 = a[12] , in2 = b[12] , out = out[12]) ; 
+    Or(in1 = a[13] , in2 = b[13] , out = out[13]) ; 
+    Or(in1 = a[14] , in2 = b[14] , out = out[14]) ; 
+    Or(in1 = a[15] , in2 = b[15] , out = out[15]) ; 
     
 }
