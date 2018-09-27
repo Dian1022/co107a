@@ -13,20 +13,20 @@ CHIP And16 {
     OUT out[16];
 
     PARTS:
-    And(in1 = a[0] , in2 = b[0] , out = Andout[0]) ; 
-    And(in1 = a[1] , in2 = b[1] , out = Andout[1]) ;
-    And(in1 = a[2] , in2 = b[2] , out = Andout[2]) ; 
-    And(in1 = a[3] , in2 = b[3] , out = Andout[3]) ; 
-    And(in1 = a[4] , in2 = b[4] , out = Andout[4]) ; 
-    And(in1 = a[5] , in2 = b[5] , out = Andout[5]) ; 
-    And(in1 = a[6] , in2 = b[6] , out = Andout[6]) ; 
-    And(in1 = a[7] , in2 = b[7] , out = Andout[7]) ; 
-    And(in1 = a[8] , in2 = b[8] , out = Andout[8]) ; 
-    And(in1 = a[9] , in2 = b[9] , out = Andout[9]) ; 
-    And(in1 = a[10] , in2 = b[10] , out = Andout[10]) ; 
-    And(in1 = a[11] , in2 = b[11] , out = Andout[11]) ; 
-    And(in1 = a[12] , in2 = b[12] , out = Andout[12]) ; 
-    And(in1 = a[13] , in2 = b[13] , out = Andout[13]) ; 
-    And(in1 = a[14] , in2 = b[14] , out = Andout[14]) ; 
-    And(in1 = a[15] , in2 = b[15] , out = Andout[15]) ;
+    And(in1 = a[0] , in2 = b[0] , out = out[0]) ; 
+    And(in1 = a[1] , in2 = b[1] , out = out[1]) ;
+    And(in1 = a[2] , in2 = b[2] , out = out[2]) ; 
+    And(in1 = a[3] , in2 = b[3] , out = out[3]) ; 
+    And(in1 = a[4] , in2 = b[4] , out = out[4]) ; 
+    And(in1 = a[5] , in2 = b[5] , out = out[5]) ; 
+    And(in1 = a[6] , in2 = b[6] , out = out[6]) ; 
+    And(in1 = a[7] , in2 = b[7] , out = out[7]) ; 
+    And(in1 = a[8] , in2 = b[8] , out = out[8]) ; 
+    And(in1 = a[9] , in2 = b[9] , out = out[9]) ; 
+    And(in1 = a[10] , in2 = b[10] , out = out[10]) ; 
+    And(in1 = a[11] , in2 = b[11] , out = out[11]) ; 
+    And(in1 = a[12] , in2 = b[12] , out = out[12]) ; 
+    And(in1 = a[13] , in2 = b[13] , out = out[13]) ; 
+    And(in1 = a[14] , in2 = b[14] , out = out[14]) ; 
+    And(in1 = a[15] , in2 = b[15] , out = out[15]) ;
 }
