@@ -13,6 +13,6 @@ CHIP Not {
     OUT out;
 
     PARTS:
-    // Nand( a = in , b = in , out = aNandb ) ;
+    // Nand( in = a , in = b , out = aNandb ) ;
       
 }
