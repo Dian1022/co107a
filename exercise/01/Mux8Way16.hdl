@@ -1,4 +1,4 @@
-// This file is part of www.nand2tetris.org
+a// This file is part of www.nand2tetris.org
 // and the book "The Elements of Computing Systems"
 // by Nisan and Schocken, MIT Press.
 // File name: projects/01/Mux8Way16.hdl
@@ -18,11 +18,11 @@ CHIP Mux8Way16 {
     OUT out[16];
 
     PARTS:
-    Mux16(in1 = a , in2 = b , sel=sel[0], out = Muxab);
-    Mux16(in1 = c , in2 = d , sel=sel[0], out = Muxcd);
-    Mux16(in1 = Muxab , in2 = Muxtcd , sel = sel[1], out = Muxabcd);
-    Mux16(in1 = e , in2 = f , sel=sel[0], out = Muxef);
-    Mux16(in1 = g , in2 = h , sel=sel[0], out = Muxgh);
-    Mux16(in1 = Muxef , in2 = Muxtgh , sel = sel[1], out = Muxefgh);
-    Mux16(in1 = Muxabcd, in2 = Muxdefg, sel = sel[2], out=out);
+    Mux16(a = a , b = b , sel=sel[0], out = Muxab);
+    Mux16(a = c , b = d , sel=sel[0], out = Muxcd);
+    Mux16(a = Muxab , b = Muxtcd , sel = sel[1], out = Muxabcd);
+    Mux16(a = e , b = f , sel=sel[0], out = Muxef);
+    Mux16(a = g , b = h , sel=sel[0], out = Muxgh);
+    Mux16(a = Muxef , b = Muxtgh , sel = sel[1], out = Muxefgh);
+    Mux16(a = Muxabcd, b = Muxdefg, sel = sel[2], out=out);
 }
