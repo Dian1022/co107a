@@ -12,52 +12,97 @@
 // the screen should remain fully clear as long as no key is pressed.
 
 
-//我複製貼上的ouoˇ  我覺得依我的腦袋打不出這些QAQ  我有好好理解他的  老師QAQ
+//我複製貼上老師的ouoˇ  我覺得依我的腦袋打不出這些QAQ  我有好好理解他的  老師QAQ
 
-@status
-    M=-1        // status=0xFFFF
-    D=0         // Argument - what to set screen bits to
-    @SETSCREEN
-    0;JMP
+// --------------------------
+// 類似 Ｃ語言的高階寫法
+// forever
+//   arr = SCREEN
+//   n = 8192
+//   i = 0
+//   while (i < n) {
+//     if (*KBD != 0)
+//       arr[i] = -1
+//     else
+//       arr[i] = 0
+//     i = i + 1
+//   }
+// goto forever;
+// --------------------------
+// 類似 Ｃ語言的低階寫法
+// arr = SCREEN
+// n=8192
+// FOREVER:
+// loop:
+//   if (i==n) goto ENDLOOP
+//   if (*KBD != 0)
+//     RAM[arr+i] = -1
+//   else 
+//     RAM[arr+i] = 0
+//   i++
+// goto loop
+// ENDLOOP:
+// goto FOREVER
+// --------------------------
 
+(FOREVER)
+// arr = SCREEN
+	@SCREEN     //16384
+	D=A
+	@arr
+	M=D
+
+// n=8192
+	@8192
+	D=A
+	@n
+	M=D
+
+	@i
+	M=0
 (LOOP)
-    @KBD
-    D=M         // D = current keyboard character
-    @SETSCREEN
-    D;JEQ       // If no key, set screen to zeroes (white)
-    D=-1        // If key pressed, set screen to all 1 bits (black)
-    
-(SETSCREEN)     // Set D=new status before jumping here
-    @ARG
-    M=D         // Save new status arg
-    @status     // FFFF=black, 0=white - status of entire screen
-    D=D-M       // D=newstatus-status
-    @LOOP
-    D;JEQ        // Do nothing if new status == old status
-    
-    @ARG
-    D=M
-    @status
-    M=D         // status = ARG
-    
-    @SCREEN
-    D=A         // D=Screen address
-    @8192
-    D=D+A       // D=Byte just past last screen address
-    @i
-    M=D         // i=SCREEN address
-    
-(SETLOOP)    
-    @i
-    D=M-1
-    M=D         // i=i-1
-    @LOOP
-    D;JLT       // if i<0 goto LOOP
-    
-    @status
-    D=M         // D=status
-    @i
-    A=M         // Indirect
-    M=D         // M[current screen address]=status
-    @SETLOOP
-    0;JMP
+  // if (i==n) goto ENDLOOP
+	@i
+	D=M
+	@n
+	D=D-M
+	@ENDLOOP    //如果D = 0 就是全白的意思
+	D; JEQ
+	
+  // if (*KBD != 0)     //鍵盤有按下
+	@KBD                //24576
+	D=M     // D = *KBD
+	@ELSE
+	D; JEQ  // if (*KDB==0) goto ELSE
+	
+	//   RAM[arr+i] = -1        //-1 會變黑
+	@arr
+	D=M
+	@i
+	A=D+M
+	M=-1
+	
+	@ENDIF
+	0; JMP
+(ELSE)	
+  // else 
+  //   RAM[arr+i] = 0
+	@arr
+	D=M
+	@i
+	A=D+M
+	M=0
+	
+(ENDIF)
+	
+	// i++
+	@i
+	M=M+1
+	
+	@LOOP
+	0; JMP
+
+(ENDLOOP)
+	@FOREVER
+	0; JMP
+	
