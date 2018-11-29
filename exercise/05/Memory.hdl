@@ -27,5 +27,14 @@ CHIP Memory {
     OUT out[16];
 
     PARTS:
-    // Put your code here:
+        Not(in=address[14], out=N14);
+		And(a=N14, b=load, out=Mload); //輸出記憶體選擇
+		And(a=address[14], b=load, out=Sload);  //輸出螢幕選擇
+		
+		RAM16K(in=in, load=Mload, address=address[0..13], out=outM); //13575 - 0 = 2^14
+		Screen(in=in, load=Sload, address=address[0..12], out=outS); //24575 - 13576 = 2^13
+		Keyboard(out=outK); //鍵盤只有輸出
+		
+		Mux16(a=outM, b=outSK, sel=address[14], out=out); //記憶體跟下面那個只能輸出一個
+		Mux16(a=outS, b=outK, sel=address[13], out=outSK); //螢幕跟鍵盤只能輸出一個
 }
