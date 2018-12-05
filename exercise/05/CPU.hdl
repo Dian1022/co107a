@@ -72,5 +72,5 @@ CHIP CPU {
     PC(in=Aout, load=PCload, inc=true, reset=reset, out[0..14]=pc); // PCload = isC & ((ng&j1) | (zr&j2) | (!ng&!zr&j3))
     
      // output
-    And(a=isC, b=d3, out=writeM);         // writeM = isC & d3是M  是直接寫進記憶體的
+    And(a=isC, b=d3, out=writeM);         // writeM = isC & d3是M  是決定要不要讓後面的記憶體寫入的東西
 }
