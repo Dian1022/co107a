@@ -48,7 +48,7 @@ CHIP CPU {
     And(a=isC, b=d1, out=AluToA); //d1是目標  要寫進哪些暫存器的  當這兩個成立時才能被寫進A register
     Or(a=isA, b=AluToA, out=Aload);//因為他有兩種狀態所以要擇一
     
-    Mux16(a=instruction, b=ALUout, sel=isC, out=Ain); //新的指令跟舊的指令二擇一
+    Mux16(a=ALUout, b=instruction, sel=isC, out=Ain); //新的指令跟舊的指令二擇一
     
     ARegister(in=Ain, load=Aload, out=Aout, out[0..14]=addressM);   // Aload = isA(out[15] = 0)| (isC & d1)(out[15] = 1)  addressM=Aout[0..14](位置)
     
