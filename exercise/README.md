@@ -31,5 +31,5 @@
 4    | [Fill](04/fill/Fill.asm)               |20181129
 4    | [mult](04/mult/mult.asm)               |20181129
 5    | [Memory](05/Memory.hdl)                |20181129
-5    | [CPU](05/CPU.hdl)                      |
-5    | [Computer](05/Computer.hdl)            |
+5    | [CPU](05/CPU.hdl)                      |20181205
+5    | [Computer](05/Computer.hdl)            |20181205
